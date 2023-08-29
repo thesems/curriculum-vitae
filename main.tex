@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=1cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+    % Name & headline
+    \heading{Semir Ramovic}{Our life is what our thoughts make it.}
+
+    \switchcolumn
+
+    \vspace{-1cm}
+    \begin{tikzpicture}
+        \clip (0,0) circle (2.25cm);
+        \node at (0,-0.5) {\includegraphics[width=0.2\textwidth]{profile.jpeg}};
+    \end{tikzpicture}
+
+    \switchcolumn*
+
+    \section{experience}
+
+    \entry{Easelink}{Senior Software Developer}{Graz, Austria}{2018-2023}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Built e-vehicle charger software with Python and C++.
+        \item Built IoT cloud systems with Microsoft Azure Cloud.
+        \item Owner for multiple system components.
+        \item Managed product lifecycle from planning to maintanance.
+        \item Built front-end web apps with Vue.js and Nuxt.js.
+        \item Built CI/CD pipeline Bitbucket Pipelines and Docker.
+        \item Administered Linux-based systems.
+    \end{itemize}
+
+    \medskip
+
+    \entry{Cyber Republic}{Full stack Developer}{Remote}{2018}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Front-end development with React.js
+        \item Back-end development with Node.js, Express.js, MongoDB.
+    \end{itemize}
+
+    \medskip
+
+    \entry{CAMPUSonline}{Front-end Developer}{Graz, Austria}{Jan - Jun 2018}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item SPA development with Angular Framework.
+        \item Back-end development in Java with REST and PostgreSQL.
+    \end{itemize}
+
+    \medskip
+
+    \entry{Robotic Eyes}{Software Developer}{Graz, Austria}{Jun - Aug 2017}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item 3D model processing with C++ (mesh simplification).
+    \end{itemize}
+
+    \switchcolumn
+
+    \section{skills}
+    \begin{supertabular}{rl}
+        \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} Go \textperiodcentered{} C/C++}{}
+        \tableentry{}{JavaScript \textperiodcentered{} Git \textperiodcentered{} Linux}{}
+        \tableentry{}{}{}
+
+        \tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} fluent}{}
+        \tableentry{}{German \textperiodcentered{} fluent}{}
+        \tableentry{}{Bosnian \textperiodcentered{} native}{}
+        \tableentry{}{Turkish \textperiodcentered{} beginner}{}
+
+        \tableentry{}{}{}
+        \tableentry{\footnotesize\faFire}{Focused \textperiodcentered{} Passionate}{}
+        \tableentry{}{Proactive \textperiodcentered{} Team-oriented}{}
+    \end{supertabular}
+
+    \section{other interests}
+    \begin{supertabular}{rl}
+        \tableentry{Core }{Programming}{}
+        \tableentry{}{Reading}{spaceafter}
+        \tableentry{Sport}{Tennis}{}
+        \tableentry{}{Hiking}{}
+        \tableentry{}{Fitness}{spaceafter}
+    \end{supertabular}
+
+    \section{contact}
+    % Identity card
+    \vspace{0.01\textheight}
+    \begin{supertabular}{ll}
+        \footnotesize\faPhone & +43 660 263 8482 \\
+        \footnotesize\faEnvelope & \href{mailto:semir.ramovic@outlook.com}{semir.ramovic@outlook.com} \\
+        \footnotesize\faGlobe & \href{https://lifeofsems.com}{lifeofsems.com} \\
+        \footnotesize\faGithub & \href{https://github.com/thesems}{github.com/thesems} \\
+    \end{supertabular}
+
+    \switchcolumn
+
+    \section{education}
+
+    \entry{Graz University of Technology}{MSc. -- SW Development and Management}{Graz, Austria}{2019 -- 2023}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Major: Data Science
+        \item Minor: Management and Strategy
+    \end{itemize}
+
+    \smallskip
+
+    \entry{Graz University of Technology}{BSc. -- Computer Science}{Graz, Austria}{2013 -- 2017}
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
