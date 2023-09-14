@@ -29,7 +29,7 @@
 \pagestyle{empty}
 \titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
-\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\heading}[3]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}\\\smallskip{\small{#3}}\\}
 \newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
 \newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 
@@ -40,7 +40,7 @@
 \begin{paracol}{2}
 
     % Name & headline
-    \heading{Semir Ramovic}{Our life is what our thoughts make it.}
+    \heading{Semir Ramovic}{Our life is what our thoughts make it.}{29 years old \textperiodcentered{} Graz, Austria }
 
     \switchcolumn
 
